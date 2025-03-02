@@ -99,3 +99,12 @@ def run_model(prompt:str):
     
     text = tokenizer.decode(output.sequences[0])
     return text
+
+def get_model():
+    # Apply the replacement to the model
+    replace_attention_with_performer(model)
+    return model
+
+def get_tokenizer():
+    return tokenizer
+    
