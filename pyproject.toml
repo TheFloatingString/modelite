@@ -3,5 +3,19 @@ name = "modelite"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = []
+authors = [
+    { name = "Laurence Liang", email = "tmp@tmp.iox" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "performer-pytorch>=1.1.4",
+    "torch>=2.6.0",
+    "transformers>=4.49.0",
+]
+
+[project.scripts]
+modelite = "modelite:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
